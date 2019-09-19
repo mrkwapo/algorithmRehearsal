@@ -35,7 +35,7 @@ function sumPrimes(num) {
       primeNumbers.push(arrNotWholeNums[k]);
     }
   }
-  console.log(primeNumbers);
+  console.log('These appear to be prime numbers: ' + primeNumbers);
 
   return num;
 }
