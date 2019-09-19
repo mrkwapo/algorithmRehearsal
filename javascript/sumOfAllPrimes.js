@@ -37,7 +37,13 @@ function sumPrimes(num) {
   }
   console.log('These appear to be prime numbers: ' + primeNumbers);
 
-  return num;
+  var total = 0;
+
+  for (var l = 0; l < primeNumbers.length; l++) {
+    total += primeNumbers[l];
+  }
+  console.log(total);
+  return total;
 }
 
 sumPrimes(30);
