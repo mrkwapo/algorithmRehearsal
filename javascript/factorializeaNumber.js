@@ -22,57 +22,54 @@
 //////////////////////////////////////////////////////////////
 /////////SOLUTION///////////////
 //////////////////////////////////////////////////////////////
-// To prove whether a number is a prime number, first try dividing it by 2, and see if you get a whole number. If you do, it can't be a prime number. If you don't get a whole number, next try dividing it by prime numbers: 3, 5, 7, 11 (9 is divisible by 3) and so on, always dividing by a prime number. 
+// To prove whether a number is a prime number, first try dividing it by 2, and see if you get a whole number. If you do, it can't be a prime number. If you don't get a whole number, next try dividing it by prime numbers: 3, 5, 7, 11 (9 is divisible by 3) and so on, always dividing by a prime number.
 //My suedo code:
 
 // divide each number by 2
 
-//use .isInteger() to check if you get a whole number 
+//use .isInteger() to check if you get a whole number
 
 //if you get a whole number it is not a prime number so get rid of it
 
-
 //then divide each number by 3
 
-
 ///if it is divisible then it is not a prime number
-
 
 function sumPrimes(num) {
   //put each number below num in an array
-var arrOfNumbers =[];
-var arrNumDividedByTwo= [];
+  var arrOfNumbers = [];
+  var arrNotWholeNums = [];
+  var primeNumbers = [];
+  for (var i = 1; i <= num; i++) {
+    arrOfNumbers.push(i);
+  }
+  console.log(
+    'This is the each number including and below num (which is now 10): ' +
+      arrOfNumbers
+  );
 
-for(var i = 1; i <= num; i++){
-  arrOfNumbers.push(i);
-}
-console.log("This is the each number including and below num (which is now 10): " + arrOfNumbers)
+  // divide each number by 2
+  //use .isInteger() to check if you get a whole number
+  //if you get a whole number it is not a prime number so get rid of it
+  for (var j = 0; j < arrOfNumbers.length; j++) {
+    if (Number.isInteger(arrOfNumbers[j] / 2) !== true) {
+      arrNotWholeNums.push(arrOfNumbers[j]);
+    }
+  }
+  console.log(
+    'Each number when divided by 2 is not a whole number : ' + arrNotWholeNums
+  );
 
-// divide each number by 2
-for(var j = 0; j < arrOfNumbers.length; j++){
-var eachNumDividedByTwo = arrOfNumbers[j]/2;
-arrNumDividedByTwo.push(eachNumDividedByTwo);
-}
-console.log("This is the array of each number divided by 2: "+ arrNumDividedByTwo)
-
-//use .isInteger() to check if you get a whole number 
-
-
-//if you get a whole number it is not a prime number so get rid of it
-
-
-//then divide each number by 3
-
-
-///if it is divisible then it is not a prime number
-
-
-
-
-
+  //then divide each number by 3
+  ///if it is divisible then it is not a prime number
+  for (var k = 0; k < arrNotWholeNums.length; k++) {
+    if (arrNotWholeNums[k] % 3 != 0) {
+      primeNumbers.push(arrNotWholeNums[k]);
+    }
+  }
+  console.log(primeNumbers);
 
   return num;
 }
 
-sumPrimes(10);
-
+sumPrimes(30);
