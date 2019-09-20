@@ -31,7 +31,10 @@ function sumPrimes(num) {
   //then divide each number by 3
   ///if it is divisible then it is not a prime number
   for (var k = 0; k < arrNotWholeNums.length; k++) {
-    if (arrNotWholeNums[k] === 5 || arrNotWholeNums[k] % 5 != 0) {
+    if (
+      arrNotWholeNums[k] === 5 ||
+      (arrNotWholeNums[k] % 5 != 0 && arrNotWholeNums[k] % 9)
+    ) {
       primeNumbers.push(arrNotWholeNums[k]);
     }
   }
@@ -42,8 +45,8 @@ function sumPrimes(num) {
   for (var l = 0; l < primeNumbers.length; l++) {
     total += primeNumbers[l];
   }
-  console.log(total);
+  console.log('This is the sum of all prime numbers: ' + total);
   return total;
 }
 
-sumPrimes(30);
+sumPrimes(10);
