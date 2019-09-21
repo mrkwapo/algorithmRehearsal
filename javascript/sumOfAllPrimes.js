@@ -13,7 +13,7 @@ function sumPrimes(num) {
 
   // divide each number by 2
   //use .isInteger() to check if you get a whole number
-  //if you get a whole number it is not a prime number so get rid of it
+  //if you get a whole number it is not a prime number so get rid of it.
   for (var j = 1; j < arrOfNumbers.length; j++) {
     if (
       arrOfNumbers[j] === 2 ||
