@@ -28,7 +28,7 @@ function sumPrimes(num) {
       arrNotWholeNums
   );
 
-  //then divide each number by 3
+  //then divide each number by 3 
   ///if it is divisible then it is not a prime number
   for (var k = 0; k < arrNotWholeNums.length; k++) {
     if (
@@ -38,7 +38,7 @@ function sumPrimes(num) {
       primeNumbers.push(arrNotWholeNums[k]);
     }
   }
-  console.log('These appear to be prime numbers: ' + primeNumbers);
+  console.log('These numbers appear to be prime numbers: ' + primeNumbers);
 
   var total = 0;
 
