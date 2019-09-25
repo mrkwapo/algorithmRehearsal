@@ -13,16 +13,16 @@ function confirmEnding(str, target) {
   //when you subtract the length of the target from the length of the string it will give you the substring we need to be tested.
 
   var first = str.length;
-  //console.log(str.length);
+  console.log(str.length);
 
   var second = target.length;
-  //console.log(target.length)
+  console.log(target.length);
 
   var difference = first - second;
-  //console.log(first-second);
+  console.log(first - second);
 
   if (str.substring(difference) === target) {
-    // console.log(true)
+    console.log(true);
     return true;
   }
 
