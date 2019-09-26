@@ -4,7 +4,6 @@
 function repeatStringNumTimes(str, num) {
   // create 
 var arr = [];
-if(num)
   for(var i = 0; i < num;i++){
   arr.push(str);
   }
