@@ -26,3 +26,6 @@ largestOfFour([
   [32, 35, 37, 39],
   [1000, 1001, 857, 1]
 ]);
+
+
+// I solved this using math.max and the spread method. Will update on GitHub soon
