@@ -7,15 +7,27 @@
 //Input strings are guaranteed to be English words in all lowercase
 
 function translatePigLatin(str) {
-//
-//create a variable that contains all vowels
-//iterate through each letter in str
-//slice letters before the first vowel and append it to the the same word
-//after appending consonants append "ay" to the string.
-//but if a word begins with a vowel then just add "way" to the end of the word
-//  
+  // Create variables to be used
+  var pigLatin = '';
+  var regex = /[aeiou]/gi;
 
-  return str;
+  // Check if the first character is a vowel
+  if (str[0].match(regex)) {
+    pigLatin = str + 'way';
+  } else if (str.match(regex) === null) {
+    // Check if the string contains only consonants
+    pigLatin = str + 'ay';
+  } else {
+    // Find how many consonants before the first vowel.
+    var vowelIndice = str.indexOf(str.match(regex)[0]);
+
+    // Take the string from the first vowel to the last char
+    // then add the consonants that were previously omitted and add the ending.
+    pigLatin = str.substr(vowelIndice) + str.substr(0, vowelIndice) + 'ay';
+  }
+  console.log(pigLatin);
+  return pigLatin;
 }
 
-translatePigLatin("consonant");
+// test here
+translatePigLatin('consonant');
