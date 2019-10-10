@@ -15,10 +15,9 @@ function destroyer() {
       }
     }
   }
-  //if you return args[0] now it looks like: [ 7, <2 empty items>, 7, <2 empty items> ]
-  //Boolean returns
-
-  //so we filter Boolean to return the array with the elements that met the condition
+  //console.log(args[0]);
+  //When we return args[0] now it will return [ 7, <2 empty items>, 7, <2 empty items> ] or [7,,7,,]
+  //To get rid of the empty spaces we need to filter out the empty strings using Boolean
   console.log(args[0].filter(Boolean));
   return args[0].filter(Boolean);
   //console.log(restOfArgs);
